@@ -40,6 +40,10 @@ def login():
     else:
         return jsonify(success=False,msg="账号或密码错误")
 
+#测试get方法
+@app.route("/get_users", methods=["GET"])
+def get_users():
+    return jsonify(name="俏佳人",age="38",height="187",weight="68kg")
 
 app.run(host="0.0.0.0", port=5001)
 app.debug=True
